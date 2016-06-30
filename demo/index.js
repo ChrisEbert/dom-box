@@ -2,7 +2,6 @@
 
 on
 off
-removeClass
 hasClass
 last
 index
