@@ -16,7 +16,8 @@
     "demo:js": "node node_modules/browserify/bin/cmd.js ./demo/index.js -t babelify --outfile ./demo/bundle.js",
     "demo:watch": "npm-watch",
     "demo:livereload": "node node_modules/livereload/bin/livereload.js ./demo/",
-    "dev": "npm run demo:livereload & npm run demo:watch"
+    "dev": "npm run demo:livereload & npm run demo:watch",
+    "docs": "documentation readme index.js --readme-file=readme.md --section=API --quiet"
   },
   "author": "Chris Ebert <chris_ebert@gmx.de> (https://github.com/ChrisEbert)",
   "license": "MIT",

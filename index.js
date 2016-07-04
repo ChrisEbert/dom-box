@@ -1,3 +1,11 @@
+/**
+ * Finds elements in the given scope, filtered by the given selector
+ * @param  {selector|element} paramSelector The elements to find
+ * @param  {selector|element} [paramScope=document] The scope to search for the elements
+ * @return {array} A set of elements
+ * @example
+ * fetchElements('.foo', '#bar');
+ */
 export const fetchElements = function fetchElements(paramSelector, paramScope = document) {
 	const result = [];
 	let scopes = Array.isArray(paramScope) ? [...paramScope] : [paramScope];

@@ -6,10 +6,7 @@ Dom-box is a neat wrapper around DOM APIs with jQuery like syntax. It is designe
 
 ## Install
 
-```
-$ npm install --save dombox
-```
-
+    $ npm install --save dombox
 
 ## Usage
 
@@ -19,14 +16,6 @@ import {addClass} from 'dom-box/modules/add_class';
 
 $('.msg', addClass('open'));
 ```
-
-
-## Modules
-
-* addClass
-* find
-* first
-* ...
 
 ## Create your own modules
 
@@ -50,8 +39,26 @@ const findTheMightyElements = wizard(function findTheMightyElements() {
 */
 
 $('*', findTheMightyElements()); // [mighty]
-
 ```
+
+## API
+
+### fetchElements
+
+Finds elements in the given scope, filtered by the given selector
+
+**Parameters**
+
+-   `paramSelector` **(selector | [element](https://developer.mozilla.org/en-US/docs/Web/API/Element))** The elements to find
+-   `paramScope` **\[(selector | [element](https://developer.mozilla.org/en-US/docs/Web/API/Element))]** The scope to search for the elements (optional, default `document`)
+
+**Examples**
+
+```javascript
+fetchElements('.foo', '#bar');
+```
+
+Returns **[array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** A set of elements
 
 ## License
 
