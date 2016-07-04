@@ -4,7 +4,7 @@
 
 Dom-box is a neat wrapper around DOM APIs with jQuery like syntax. It is designed to fit only your needs. Import just what your app deserves.
 
-## Install
+## Install (coming soon)
 
     $ npm install --save dombox
 

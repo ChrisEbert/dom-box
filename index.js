@@ -3,8 +3,6 @@
  * @param  {selector|element} paramSelector The elements to find
  * @param  {selector|element} [paramScope=document] The scope to search for the elements
  * @return {array} A set of elements
- * @example
- * fetchElements('.foo', '#bar');
  */
 export const fetchElements = function fetchElements(paramSelector, paramScope = document) {
 	const result = [];
@@ -59,5 +57,6 @@ export const $ = function domBox(paramSelector, paramScope = document, ...paramM
 export default $;
 
 export {addClass} from './modules/add_class';
+export {removeClass} from './modules/remove_class';
 export {first} from './modules/first';
 export {find} from './modules/find';
