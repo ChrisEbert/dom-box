@@ -1,11 +1,8 @@
 import assert from 'assert';
-import jsdom from 'mocha-jsdom';
 import removeClass from '../modules/remove_class';
 
 describe('removeClass', () => {
-	jsdom();
-
-	it('should throw an error if invalid params are given', () => {
+	it('should throw an error if no params are given', () => {
 		assert.throws(() => {
 			removeClass();
 		});

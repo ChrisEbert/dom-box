@@ -1,10 +1,7 @@
 import assert from 'assert';
-import jsdom from 'mocha-jsdom';
 import $, {fetchElements} from '../index';
 
 describe('fetchElements', () => {
-	jsdom();
-
 	it('should return an empty array if no elements were found', () => {
 		const selector = fetchElements('.foo');
 		assert(Array.isArray(selector));
@@ -81,8 +78,6 @@ describe('fetchElements', () => {
 });
 
 describe('$', () => {
-	jsdom();
-
 	it('should return an array', () => {
 		assert.deepEqual($(), []);
 	});

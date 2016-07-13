@@ -2,7 +2,6 @@
 
 on
 off
-hasClass
 last
 index
 prev

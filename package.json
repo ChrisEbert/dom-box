@@ -17,7 +17,7 @@
     "demo:watch": "npm-watch",
     "demo:livereload": "node node_modules/livereload/bin/livereload.js ./demo/",
     "dev": "npm run demo:livereload & npm run demo:watch",
-    "docs": "documentation readme index.js --readme-file=readme.md --section=API --quiet"
+    "doc": "documentation readme index.js --readme-file=readme.md --section=API --quiet --github"
   },
   "author": "Chris Ebert <chris_ebert@gmx.de> (https://github.com/ChrisEbert)",
   "license": "MIT",
@@ -41,10 +41,11 @@
     "babel-register": "^6.5.2",
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
-    "jsdom": "^9.2.1",
+    "documentation": "^4.0.0-beta8",
+    "jsdom": "^9.4.1",
+    "jsdom-global": "^2.0.0",
     "livereload": "^0.4.1",
     "mocha": "^2.4.5",
-    "mocha-jsdom": "^1.1.0",
     "npm-watch": "^0.1.1",
     "xo": "^0.12.1"
   }
