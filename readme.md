@@ -45,7 +45,7 @@ $('*', findTheMightyElements()); // [mighty]
 
 ### fetchElements
 
-[index.js:7-33](https://github.com/ChrisEbert/dom-box/blob/5de62f1d95e2b2b04615bc64566ac6a1f7bde86e/index.js#L7-L33 "Source code on GitHub")
+[index.js:7-33](https://github.com/ChrisEbert/dom-box/blob/2faf33d8c0e6502dc6175c23d4050d91abdfd0da/index.js#L7-L33 "Source code on GitHub")
 
 Finds elements in the given scope, filtered by the given selector
 
@@ -58,7 +58,7 @@ Returns **[array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 
 ### addClass
 
-[modules/add_class.js:14-22](https://github.com/ChrisEbert/dom-box/blob/5de62f1d95e2b2b04615bc64566ac6a1f7bde86e/modules/add_class.js#L14-L22 "Source code on GitHub")
+[modules/add_class.js:13-21](https://github.com/ChrisEbert/dom-box/blob/2faf33d8c0e6502dc6175c23d4050d91abdfd0da/modules/add_class.js#L13-L21 "Source code on GitHub")
 
 Adds one or more classes to each of the selected elements.
 
@@ -70,11 +70,32 @@ Adds one or more classes to each of the selected elements.
 
 ```javascript
 $('div', addClass('foo'));
-
 $('div', addClass('foo bar'));
 ```
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The selected elements.
+
+### val
+
+[modules/val.js:16-27](https://github.com/ChrisEbert/dom-box/blob/2faf33d8c0e6502dc6175c23d4050d91abdfd0da/modules/val.js#L16-L27 "Source code on GitHub")
+
+Get the value of the first element or set the value of each element.
+
+**Parameters**
+
+-   `value` **\[([String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number))]** The functions works as setter if this parameter is given.
+
+**Examples**
+
+```javascript
+// <input type="text" value="foo" />
+$('input', val()); // foo
+$('input', val('bar')); // <input type="text" value="bar" />
+```
+
+Returns **([Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) \| [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))** The current set of matched elements if the function
+                       works as setter, or the value of the first element if
+                       the function works as getter.
 
 ## License
 

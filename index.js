@@ -58,5 +58,8 @@ export default $;
 
 export {addClass} from './modules/add_class';
 export {removeClass} from './modules/remove_class';
+export {hasClass} from './modules/has_class';
 export {first} from './modules/first';
+export {last} from './modules/last';
 export {find} from './modules/find';
+export {val} from './modules/val';

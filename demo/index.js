@@ -2,7 +2,6 @@
 
 on
 off
-last
 index
 prev
 next
