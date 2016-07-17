@@ -1,5 +1,6 @@
 import assert from 'assert';
 import $, {fetchElements} from '../index';
+import wizard from '../mod_wizard';
 
 describe('fetchElements', () => {
 	it('should return an empty array if no elements were found', () => {
@@ -57,12 +58,9 @@ describe('fetchElements', () => {
 		const elements = fetchElements('div');
 		const sameElements = fetchElements(elements);
 
-		const vanillaSingle = document.querySelector('div');
-		const vanillaAll = document.querySelectorAll('div');
-
-		assert.deepEqual(sameElements, elements);
-		assert.deepEqual(fetchElements(vanillaSingle)[0], vanillaSingle);
-		assert.deepEqual(fetchElements(vanillaAll), Array.from(vanillaAll));
+		elements.forEach((element, index) => {
+			assert(element.isEqualNode(sameElements[index]));
+		});
 	});
 
 	it('should search for elements in an already fetched scope', () => {
@@ -75,10 +73,32 @@ describe('fetchElements', () => {
 
 		assert.equal(children.length, 2);
 	});
+
+	it('should add dom nodes to the set', () => {
+		document.body.innerHTML = '<div></div><div></div><button></button>';
+
+		const divs = document.querySelectorAll('div');
+		const button = document.querySelector('button');
+
+		assert.equal(fetchElements(divs).length, 2);
+		assert.equal(fetchElements(button).length, 1);
+	});
 });
 
 describe('$', () => {
 	it('should return an array', () => {
 		assert.deepEqual($(), []);
+	});
+
+	it('should call the modifiers', () => {
+		const testResults = {a: false, b: false};
+		const testModifier = wizard((key, obj) => {
+			obj[key] = true;
+		});
+
+		$('*', testModifier('a', testResults), testModifier('b', testResults));
+
+		assert(testResults.a);
+		assert(testResults.b);
 	});
 });

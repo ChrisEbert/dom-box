@@ -8,6 +8,6 @@ describe('last', () => {
 		const lastDiv = last.call(divs);
 
 		assert.equal(lastDiv.length, 1);
-		assert.equal(lastDiv[0].id, divs[divs.length - 1].id);
+		assert(lastDiv[0].isEqualNode(divs[divs.length - 1]));
 	});
 });

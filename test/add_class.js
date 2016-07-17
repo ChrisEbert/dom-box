@@ -15,7 +15,9 @@ describe('addClass', () => {
 
 		const newDivs = addClass.call(divs, 'foo');
 
-		assert.equal(newDivs, divs);
+		divs.forEach((element, index) => {
+			assert(element.isEqualNode(newDivs[index]));
+		});
 	});
 
 	it('should add a single css class to the elements', () => {

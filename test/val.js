@@ -24,7 +24,10 @@ describe('val', () => {
 	it('should return the same set of elements if used as setter', () => {
 		document.body.innerHTML = '<input /><input />';
 		const inputs = Array.from(document.querySelectorAll('input'));
+		const modifiedInputs = val.call(inputs, 'setted!');
 
-		assert.equal(val.call(inputs, 'setted!'), inputs);
+		inputs.forEach((element, index) => {
+			assert(element.isEqualNode(modifiedInputs[index]));
+		});
 	});
 });

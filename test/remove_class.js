@@ -15,7 +15,9 @@ describe('removeClass', () => {
 
 		const newDivs = removeClass.call(divs, 'foo');
 
-		assert.equal(newDivs, divs);
+		divs.forEach((element, index) => {
+			assert(element.isEqualNode(newDivs[index]));
+		});
 	});
 
 	it('should remove a single css class from the elements', () => {
