@@ -12,7 +12,7 @@
     ]
   },
   "scripts": {
-    "test": "node node_modules/xo/cli.js && ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
+    "test": "node node_modules/xo/cli.js && ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "demo:js": "node node_modules/browserify/bin/cmd.js ./demo/index.js -t babelify --outfile ./demo/bundle.js",
     "demo:watch": "npm-watch",
     "demo:livereload": "node node_modules/livereload/bin/livereload.js ./demo/",
@@ -41,6 +41,7 @@
     "babel-register": "^6.5.2",
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
+    "coveralls": "^2.11.11",
     "documentation": "^4.0.0-beta8",
     "istanbul": "^1.1.0-alpha.1",
     "jsdom": "^9.4.1",
