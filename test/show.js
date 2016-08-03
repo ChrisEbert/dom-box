@@ -19,6 +19,6 @@ describe('show', () => {
 		const div = Array.from(document.querySelectorAll('div'));
 		show.call(div);
 
-		assert.equal(div.style.display, 'block');
+		assert.equal(div[0].style.display, 'block');
 	});
 });

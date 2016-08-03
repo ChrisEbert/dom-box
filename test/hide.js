@@ -19,6 +19,6 @@ describe('hide', () => {
 		const div = Array.from(document.querySelectorAll('div'));
 		hide.call(div);
 
-		assert.equal(div.style.display, 'none');
+		assert.equal(div[0].style.display, 'none');
 	});
 });
