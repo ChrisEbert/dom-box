@@ -16,7 +16,7 @@ describe('hide', () => {
 	it('should set the display property to none', () => {
 		document.body.innerHTML = '<div style="display: block"></div>';
 
-		const div = Array.from((document.querySelectorAll('div'));
+		const div = Array.from(document.querySelectorAll('div'));
 		hide.call(div);
 
 		assert.equal(div.style.display, 'none');
