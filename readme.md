@@ -41,11 +41,32 @@ const findTheMightyElements = wizard(function findTheMightyElements() {
 $('*', findTheMightyElements()); // [mighty]
 ```
 
+## Todo
+
+-   on
+-   off
+-   index
+-   prev
+-   next
+-   prevAll
+-   nextAll
+-   replaceWith
+-   wrap
+-   html
+-   text
+-   val
+-   prop
+-   attr
+-   bind (observer)
+-   remove
+-   append
+-   data
+
 ## API
 
 ### fetchElements
 
-[index.js:7-33](https://github.com/ChrisEbert/dom-box/blob/6eac547118329a0ed161b9bff13c1120feb17388/index.js#L7-L33 "Source code on GitHub")
+[index.js:7-33](https://github.com/ChrisEbert/dom-box/blob/4f95be8143ce5fa513c3daf1509315d6cd21d236/index.js#L7-L33 "Source code on GitHub")
 
 Finds elements in the given scope, filtered by the given selector
 
@@ -58,7 +79,7 @@ Returns **[array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 
 ### addClass
 
-[modules/add_class.js:13-21](https://github.com/ChrisEbert/dom-box/blob/6eac547118329a0ed161b9bff13c1120feb17388/modules/add_class.js#L13-L21 "Source code on GitHub")
+[modules/add_class.js:13-21](https://github.com/ChrisEbert/dom-box/blob/4f95be8143ce5fa513c3daf1509315d6cd21d236/modules/add_class.js#L13-L21 "Source code on GitHub")
 
 Adds one or more classes to each of the selected elements.
 
@@ -77,7 +98,7 @@ Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 
 ### removeClass
 
-[modules/remove_class.js:13-21](https://github.com/ChrisEbert/dom-box/blob/6eac547118329a0ed161b9bff13c1120feb17388/modules/remove_class.js#L13-L21 "Source code on GitHub")
+[modules/remove_class.js:13-21](https://github.com/ChrisEbert/dom-box/blob/4f95be8143ce5fa513c3daf1509315d6cd21d236/modules/remove_class.js#L13-L21 "Source code on GitHub")
 
 Removes one or more classes from each of the selected elements.
 
@@ -96,7 +117,7 @@ Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 
 ### hasClass
 
-[modules/has_class.js:13-19](https://github.com/ChrisEbert/dom-box/blob/6eac547118329a0ed161b9bff13c1120feb17388/modules/has_class.js#L13-L19 "Source code on GitHub")
+[modules/has_class.js:13-19](https://github.com/ChrisEbert/dom-box/blob/4f95be8143ce5fa513c3daf1509315d6cd21d236/modules/has_class.js#L13-L19 "Source code on GitHub")
 
 Checks if at least one element in the current set contains the given class or classes.
 
@@ -115,7 +136,7 @@ Returns **[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 
 ### first
 
-[modules/first.js:17-19](https://github.com/ChrisEbert/dom-box/blob/6eac547118329a0ed161b9bff13c1120feb17388/modules/first.js#L17-L19 "Source code on GitHub")
+[modules/first.js:17-19](https://github.com/ChrisEbert/dom-box/blob/4f95be8143ce5fa513c3daf1509315d6cd21d236/modules/first.js#L17-L19 "Source code on GitHub")
 
 Reduces the current set to the first element in the set.
 
@@ -135,7 +156,7 @@ Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 
 ### last
 
-[modules/last.js:17-19](https://github.com/ChrisEbert/dom-box/blob/6eac547118329a0ed161b9bff13c1120feb17388/modules/last.js#L17-L19 "Source code on GitHub")
+[modules/last.js:17-19](https://github.com/ChrisEbert/dom-box/blob/4f95be8143ce5fa513c3daf1509315d6cd21d236/modules/last.js#L17-L19 "Source code on GitHub")
 
 Reduces the current set to the last element in the set.
 
@@ -155,7 +176,7 @@ Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 
 ### find
 
-[modules/find.js:17-25](https://github.com/ChrisEbert/dom-box/blob/6eac547118329a0ed161b9bff13c1120feb17388/modules/find.js#L17-L25 "Source code on GitHub")
+[modules/find.js:17-25](https://github.com/ChrisEbert/dom-box/blob/4f95be8143ce5fa513c3daf1509315d6cd21d236/modules/find.js#L17-L25 "Source code on GitHub")
 
 Finds the descendants in the current set, filtered by the given selector.
 
@@ -177,7 +198,7 @@ Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 
 ### val
 
-[modules/val.js:16-26](https://github.com/ChrisEbert/dom-box/blob/6eac547118329a0ed161b9bff13c1120feb17388/modules/val.js#L16-L26 "Source code on GitHub")
+[modules/val.js:16-26](https://github.com/ChrisEbert/dom-box/blob/4f95be8143ce5fa513c3daf1509315d6cd21d236/modules/val.js#L16-L26 "Source code on GitHub")
 
 Get the value of the first element or set the value of each element.
 
@@ -196,6 +217,34 @@ $('input', val('bar')); // <input type="text" value="bar" />
 Returns **([Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) \| [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))** The current set of matched elements if the function
                        is used as setter, or the value of the first element if
                        the function is used as getter.
+
+### show
+
+[modules/show.js:11-17](https://github.com/ChrisEbert/dom-box/blob/4f95be8143ce5fa513c3daf1509315d6cd21d236/modules/show.js#L11-L17 "Source code on GitHub")
+
+Display the selected elements.
+
+**Examples**
+
+```javascript
+$('div', show());
+```
+
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The selected elements.
+
+### hide
+
+[modules/hide.js:11-17](https://github.com/ChrisEbert/dom-box/blob/4f95be8143ce5fa513c3daf1509315d6cd21d236/modules/hide.js#L11-L17 "Source code on GitHub")
+
+Hide the selected elements.
+
+**Examples**
+
+```javascript
+$('div', hide());
+```
+
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** The selected elements.
 
 ## License
 

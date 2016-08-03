@@ -1,5 +1,6 @@
 import assert from 'assert';
 import val from '../modules/val';
+import {equalElements} from './_helper';
 
 describe('val', () => {
 	it('should return the value of the first input if it used as getter', () => {
@@ -26,8 +27,6 @@ describe('val', () => {
 		const inputs = Array.from(document.querySelectorAll('input'));
 		const modifiedInputs = val.call(inputs, 'setted!');
 
-		inputs.forEach((element, index) => {
-			assert(element.isEqualNode(modifiedInputs[index]));
-		});
+		equalElements(inputs, modifiedInputs);
 	});
 });

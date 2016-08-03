@@ -1,5 +1,6 @@
 import assert from 'assert';
 import removeClass from '../modules/remove_class';
+import {equalElements} from './_helper';
 
 describe('removeClass', () => {
 	it('should throw an error if no params are given', () => {
@@ -15,9 +16,7 @@ describe('removeClass', () => {
 
 		const newDivs = removeClass.call(divs, 'foo');
 
-		divs.forEach((element, index) => {
-			assert(element.isEqualNode(newDivs[index]));
-		});
+		equalElements(divs, newDivs);
 	});
 
 	it('should remove a single css class from the elements', () => {

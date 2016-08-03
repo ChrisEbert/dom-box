@@ -1,5 +1,6 @@
 import assert from 'assert';
 import addClass from '../modules/add_class';
+import {equalElements} from './_helper';
 
 describe('addClass', () => {
 	it('should throw an error if no params are given', () => {
@@ -15,9 +16,7 @@ describe('addClass', () => {
 
 		const newDivs = addClass.call(divs, 'foo');
 
-		divs.forEach((element, index) => {
-			assert(element.isEqualNode(newDivs[index]));
-		});
+		equalElements(divs, newDivs);
 	});
 
 	it('should add a single css class to the elements', () => {

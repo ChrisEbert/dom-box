@@ -63,3 +63,5 @@ export {first} from './modules/first';
 export {last} from './modules/last';
 export {find} from './modules/find';
 export {val} from './modules/val';
+export {show} from './modules/show';
+export {hide} from './modules/hide';
