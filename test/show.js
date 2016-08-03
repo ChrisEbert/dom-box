@@ -16,7 +16,7 @@ describe('show', () => {
 	it('should set the display property to block', () => {
 		document.body.innerHTML = '<div></div>';
 
-		const div = document.querySelector('div');
+		const div = Array.from(document.querySelectorAll('div'));
 		show.call(div);
 
 		assert.equal(div.style.display, 'block');
