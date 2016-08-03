@@ -1,4 +1,4 @@
-# dom-box [![Build Status](https://travis-ci.org/ChrisEbert/dom-box.svg?branch=master)](https://travis-ci.org/ChrisEbert/dom-box) [![Dependency Status](https://dependencyci.com/github/ChrisEbert/dom-box/badge)](https://dependencyci.com/github/ChrisEbert/dom-box) [![Dependency Status](https://dependencyci.com/github/ChrisEbert/dom-box/badge)](https://dependencyci.com/github/ChrisEbert/dom-box)
+# dom-box [![Build Status](https://travis-ci.org/ChrisEbert/dom-box.svg?branch=master)](https://travis-ci.org/ChrisEbert/dom-box)[![Dependency Status](https://dependencyci.com/github/ChrisEbert/dom-box/badge)](https://dependencyci.com/github/ChrisEbert/dom-box)[![Coverage Status](https://coveralls.io/repos/github/ChrisEbert/dom-box/badge.svg?branch=master)](https://coveralls.io/github/ChrisEbert/dom-box?branch=master)
 
 > You like jQuery syntax and ES2015 features?
 
